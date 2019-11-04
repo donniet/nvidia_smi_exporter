@@ -1,0 +1,1 @@
+EXPORT_PATH=/var/lib/node_exporter/textfile_collector/nvidia_smi_exporter.prom

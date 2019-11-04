@@ -1,0 +1,12 @@
+[Unit]
+Description=GPU Text Exporter
+
+[Service]
+User=node_exporter
+EnvironmentFile=/etc/sysconfig/nvidia_smi_exporter
+ExecStart=/usr/local/bin/nvidia_smi_exporter --textPath=$EXPORT_PATH
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
