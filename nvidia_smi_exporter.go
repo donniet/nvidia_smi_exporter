@@ -93,6 +93,7 @@ func main() {
 		}
 
 		go func() {
+			log.Printf("starting serve on %s", addr)
 			if err := srv.ListenAndServe(); err != nil {
 				log.Fatal(err)
 			}
@@ -104,6 +105,8 @@ func main() {
 
 		return
 	}
+
+	log.Printf("outputing to: %s", textPath)
 
 outer_loop:
 	for {
